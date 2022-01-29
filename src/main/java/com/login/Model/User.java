@@ -1,4 +1,4 @@
-package com.booking.Model;
+package com.login.Model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

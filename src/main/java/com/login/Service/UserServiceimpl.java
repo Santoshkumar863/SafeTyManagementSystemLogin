@@ -1,10 +1,10 @@
-package com.booking.Service;
+package com.login.Service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.booking.Model.User;
-import com.booking.Repository.UserRepository;
+import com.login.Model.User;
+import com.login.Repository.UserRepository;
 
 @Service
 public class UserServiceimpl implements UserService

@@ -1,4 +1,4 @@
-package com.booking.Controller;
+package com.login.Controller;
 
 import java.util.Objects;
 
@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.booking.Model.User;
-import com.booking.Service.UserService;
+import com.login.Model.User;
+import com.login.Service.UserService;
 
 @RestController
 public class UserRestController
