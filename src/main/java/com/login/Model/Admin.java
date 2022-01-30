@@ -8,22 +8,24 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Login")
-public class User {
+@Table(name = "admin")
+public class Admin {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long userId;
+	private long adminId;
 	
 	private String username;
 	private String password;
+
+	//private long adminId;
 	
 
-	public long getUserId() {
-		return userId;
+	public long getAdminId() {
+		return adminId;
 	}
 
-	public void setUserId(long userId) {
-		this.userId = userId;
+	public void setAdminId(long adminId) {
+		this.adminId = adminId;
 	}
 
 	public String getUsername() {
@@ -47,7 +49,7 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [userId=" + userId + ", username=" + username + ", password=" + password +  "]";
+		return "Admin [AdminId=" +adminId + ", username=" + username + ", password=" + password +  "]";
 	}
 
 }

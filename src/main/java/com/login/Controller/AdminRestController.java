@@ -13,30 +13,30 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.login.Model.User;
-import com.login.Service.UserService;
+import com.login.Model.Admin;
+import com.login.Service.AdminService;
 
 @RestController
-public class UserRestController
+public class AdminRestController
 {
 	@Autowired
-	UserService Service;
+	AdminService Service;
 	
 	@PostMapping("/Regist")
-	public ResponseEntity<User> createProduct(@Validated @RequestBody User user)
+	public ResponseEntity<Admin> createProduct(@Validated @RequestBody Admin admin)
 	{
 		System.out.println("Rest");
-		User e= Service.addUser(user);
+		Admin e= Service.addAdmin(admin);
 		System.out.println(e);
 		//return  ResponseEntity.ok().body("Registration Successfully");
-		return new ResponseEntity<User>(e,HttpStatus.OK);
+		return new ResponseEntity<Admin>(e,HttpStatus.OK);
 	}
 	
 	
 	@GetMapping("/login")
-	public ResponseEntity createUser(@Validated @RequestBody User user)
+	public ResponseEntity createAdmin(@Validated @RequestBody Admin admin)
 	{
-	User us=Service.login(user.getUsername(), user.getPassword());
+	Admin us=Service.admin(admin.getUsername(), admin.getPassword());
 	
 	if(Objects.nonNull(us))
 	{
