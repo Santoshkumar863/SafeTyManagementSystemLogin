@@ -12,7 +12,7 @@ import javax.persistence.Table;
 public class Admin {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long adminId;
+	private int adminId;
 	
 	private String username;
 	private String password;
@@ -20,11 +20,11 @@ public class Admin {
 	//private long adminId;
 	
 
-	public long getAdminId() {
+	public int getAdminId() {
 		return adminId;
 	}
 
-	public void setAdminId(long adminId) {
+	public void setAdminId(int adminId) {
 		this.adminId = adminId;
 	}
 
@@ -46,6 +46,21 @@ public class Admin {
 
 	
 	
+
+	
+
+	public Admin(int adminId, String username, String password) {
+		super();
+		this.adminId = adminId;
+		this.username = username;
+		this.password = password;
+	}
+	
+
+	public Admin() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	@Override
 	public String toString() {

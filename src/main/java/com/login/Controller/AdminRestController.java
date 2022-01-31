@@ -14,16 +14,17 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.login.Model.Admin;
-import com.login.Service.AdminService;
+import com.login.Service.AdminServiceimpl;
+
 
 @RestController
 public class AdminRestController
 {
 	@Autowired
-	AdminService Service;
+	AdminServiceimpl Service;
 	
 	@PostMapping("/Regist")
-	public ResponseEntity<Admin> createProduct(@Validated @RequestBody Admin admin)
+	public ResponseEntity<Admin> Incident(@Validated @RequestBody Admin admin)
 	{
 		System.out.println("Rest");
 		Admin e= Service.addAdmin(admin);

@@ -8,6 +8,8 @@ import com.login.Model.Admin;
 
 public interface AdminRepository extends JpaRepository<Admin, Integer>
 {
-	Admin findByUsernameAndPassword(String getuserName,String password);
+	Admin findByUsernameAndPassword(String username,String password);
+
+	
 	
 }
